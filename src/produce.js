@@ -1,19 +1,33 @@
 import React, { Component } from 'react'
 import produceData from './produce.json'
 import Tabs from "./tabs"
+import Mailchimp from "./mailchimp"
 
 class Header extends Component {
 
     render() {
-            return (
-                <div>
-                    {produceData.name &&
-                        <header className="">
-                            <h1 className="">The {produceData.name}</h1>
-                        </header>
-                    }
-                </div>
-            )
+        return (
+            <div>
+                {produceData.name &&
+                    <header className="">
+                        <h1 className="">The {produceData.name}</h1>
+                        <h2 className="">{produceData.latinName}</h2>
+                    </header>
+                }
+            </div>
+        )
+    }
+
+}
+
+class Image extends Component {
+
+    render() {
+        const image = require(`./images/${this.props.image}`)
+
+        return (
+            <img src={image} alt={produceData.imageAlt} />
+        )
     }
 
 }
@@ -27,7 +41,7 @@ class Intro extends Component {
                     <p className="">{produceData.intro}</p>
                 }
 
-                {produceData.introList.length &&
+                {produceData.introList &&
                     <ul>
                         {produceData.introList.map(item => 
                             <li key={item.id}>
@@ -68,9 +82,11 @@ class App extends Component {
         return (
             <div>
                 <Header />
+                {produceData.image &&<Image image={produceData.image} />}
                 <Intro />
                 <Nutritional />
                 {produceData.tabs && <Tabs tabsData={produceData.tabs} />}
+                <Mailchimp />
             </div>
         )
     }

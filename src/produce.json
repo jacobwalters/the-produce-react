@@ -1,7 +1,8 @@
 {
     "name": "Tomato",
-    "fullName": "Tomato etc",
+    "latinName": "Solanum lycopersicum",
     "image": "tomato.jpg",
+    "imageAlt": "Red tomato with stalk on white background",
 
     "nutrition": [
         {
