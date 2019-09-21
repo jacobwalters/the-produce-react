@@ -67,21 +67,37 @@
         }
     ],
 
-    "intro": [
-        {
-            "text": "There are around 7500 tomato varieties grown for various purposes. Heirloom tomatoes are becoming increasingly popular, particularly among home gardeners and organic producers, since they tend to produce more interesting and flavorful crops at the cost of disease resistance and productivity. In 1973, Israeli scientists developed the world's first long shelf-life commercial tomato varieties. Tomato varieties are roughly divided into several categories, based mostly on shape and size."
-        }
-    ],
+    "intro": "There are around 7500 tomato varieties grown for various purposes. Heirloom tomatoes are becoming increasingly popular, particularly among home gardeners and organic producers, since they tend to produce more interesting and flavorful crops at the cost of disease resistance and productivity. In 1973, Israeli scientists developed the world's first long shelf-life commercial tomato varieties. Tomato varieties are roughly divided into several categories, based mostly on shape and size.",
 
     "introList": [
-        "Slicing/globe tomatoes",
-        "Beefsteak tomatoes",
-        "Oxheart tomatoes",
-        "Plum tomatoes",
-        "Pear tomatoes",
-        "Cherry tomatoes",
-        "Grape tomatoes",
-        "Campari tomatoes"
+        {
+            "id": 1,
+            "text": "Slicing/globe tomatoes"
+        },
+        {
+            "id": 2,
+            "text": "Oxheart tomatoes"
+        },
+        {
+            "id": 3,
+            "text": "Plum tomatoes"
+        },
+        {
+            "id": 4,
+            "text": "Pear tomatoes"
+        },
+        {
+            "id": 5,
+            "text": "Cherry tomatoes"
+        },
+        {
+            "id": 6,
+            "text": "Grape tomatoes"
+        },
+        {
+            "id": 7,
+            "text": "Campari tomatoes"
+        }
     ],
 
     "tabs": [
