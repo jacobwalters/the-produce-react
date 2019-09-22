@@ -14,6 +14,6 @@ Task to build React app that displays lost tomato (or other fruit/veg) data.
 ### Setup
 
 * npm install
-* npm run serve
+* npm run start
 * npm run build (for production)
 
