@@ -3,6 +3,8 @@
     "latinName": "Solanum lycopersicum",
     "image": "tomato.jpg",
     "imageAlt": "Red tomato with stalk on white background",
+    "cover": "tomato-cover.jpg",
+    "colour": "#fe4502",
 
     "nutrition": [
         {
@@ -70,7 +72,7 @@
 
     "intro": "There are around 7500 tomato varieties grown for various purposes. Heirloom tomatoes are becoming increasingly popular, particularly among home gardeners and organic producers, since they tend to produce more interesting and flavorful crops at the cost of disease resistance and productivity. In 1973, Israeli scientists developed the world's first long shelf-life commercial tomato varieties. Tomato varieties are roughly divided into several categories, based mostly on shape and size.",
 
-    "introList": [
+    "varieties": [
         {
             "id": 1,
             "text": "Slicing/globe tomatoes"

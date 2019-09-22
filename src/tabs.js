@@ -19,22 +19,19 @@ export default class Tab extends React.Component {
 
         if (this.props.tabsData) {
             return (
-                <div>
+                <div className="tabs">
                     {this.props.tabsData.map(tab => 
-                        <span
+                        <button
                             className={
                                 this.state.activeTab === tab.id ? 'active' : ''
                             }
                             key={tab.id}
+                            type="button"
+                            onClick={() => 
+                                this.changeActiveTab(tab.id, tab.text)}
                         >
-                            <button
-                                type="button"
-                                onClick={() => 
-                                    this.changeActiveTab(tab.id, tab.text)}
-                            >
-                                {tab.title}
-                            </button>
-                        </span>
+                            {tab.title}
+                        </button>
                     )}
 
                     <TabsContent content={this.state.tabContent} />

@@ -13,14 +13,7 @@ const CustomForm = ({ status, message, onValidated }) => {
     });
 
     return (
-    <div
-        style={{
-        background: "#efefef",
-        borderRadius: 2,
-        padding: 10,
-        display: "inline-block"
-        }}
-    >
+    <div className="newsletter__form">
         {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
         {status === "error" && (
         <div
@@ -35,20 +28,18 @@ const CustomForm = ({ status, message, onValidated }) => {
         />
         )}
         <input
-        style={{ fontSize: "2em", padding: 5 }}
-        ref={node => (name = node)}
-        type="text"
-        placeholder="Your name"
+            ref={node => (name = node)}
+            type="text"
+            placeholder="Your name"
         />
         <br />
         <input
-        style={{ fontSize: "2em", padding: 5 }}
-        ref={node => (email = node)}
-        type="email"
-        placeholder="Your email"
+            ref={node => (email = node)}
+            type="email"
+            placeholder="Your email"
         />
         <br />
-        <button style={{ fontSize: "2em", padding: 5 }} onClick={submit}>
+        <button onClick={submit}>
         Submit
         </button>
     </div>
@@ -60,18 +51,19 @@ export default class Mailchimp extends React.Component {
     const url =
         "https://jster.us7.list-manage.com/subscribe/post?u=ee976be3133d7ca5589cbee43&amp;id=8e095e860e";
     return (
-        <div>
-        <h2>Custom Form</h2>
-        <MailchimpSubscribe
-            url={url}
-            render={({ subscribe, status, message }) => (
-            <CustomForm
-                status={status}
-                message={message}
-                onValidated={formData => subscribe(formData)}
+        <div className="newsletter">
+            <h3>Stay up to date about the humble {this.props.name}</h3>
+
+            <MailchimpSubscribe
+                url={url}
+                render={({ subscribe, status, message }) => (
+                <CustomForm
+                    status={status}
+                    message={message}
+                    onValidated={formData => subscribe(formData)}
+                />
+                )}
             />
-            )}
-        />
         </div>
     );
     }

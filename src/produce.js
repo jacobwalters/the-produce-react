@@ -7,14 +7,35 @@ class Header extends Component {
 
     render() {
         return (
-            <div>
-                {produceData.name &&
-                    <header className="">
-                        <h1 className="">The {produceData.name}</h1>
-                        <h2 className="">{produceData.latinName}</h2>
-                    </header>
-                }
+            <header className="header">
+                {produceData.image &&<Image image={produceData.image} />}
+                <h1 className="">The {produceData.name}</h1>
+                <h2 className="">({produceData.latinName})</h2>
+            </header>
+        )
+    }
+
+}
+
+class Cover extends Component {
+
+    render() {
+        return (
+            <div className="cover">
+                {produceData.cover &&<CoverImage image={produceData.cover} />}
             </div>
+        )
+    }
+
+}
+
+class CoverImage extends Component {
+
+    render() {
+        const image = require(`./images/${this.props.image}`)
+
+        return (
+            <div className='cover__image' style ={ { backgroundImage: "url("+image+")" } }></div>
         )
     }
 
@@ -26,7 +47,9 @@ class Image extends Component {
         const image = require(`./images/${this.props.image}`)
 
         return (
-            <img src={image} alt={produceData.imageAlt} />
+            <div className="header__image">
+                <img src={image} alt={produceData.imageAlt} />
+            </div>
         )
     }
 
@@ -36,19 +59,25 @@ class Intro extends Component {
 
     render() {
         return (
-            <div>
-                {produceData.intro &&
-                    <p className="">{produceData.intro}</p>
-                }
+            <div className="intro">
+                <div className="intro__information">
+                    {produceData.intro &&
+                        <p className="">{produceData.intro}</p>
+                    }
 
-                {produceData.introList &&
-                    <ul>
-                        {produceData.introList.map(item => 
-                            <li key={item.id}>
-                                {item.text}
-                            </li>
-                        )}
-                    </ul>
+                    {produceData.nutrition &&<Nutritional />}
+                </div>
+                {produceData.varieties &&
+                    <div className="intro__varieties">
+                        <ul>
+                            <li>Varieties</li>
+                            {produceData.varieties.map(item => 
+                                <li key={item.id}>
+                                    {item.text}
+                                </li>
+                            )}
+                        </ul>
+                    </div>
                 }
             </div>
         )
@@ -59,19 +88,15 @@ class Intro extends Component {
 class Nutritional extends Component {
 
     render() {
-        if (produceData.nutrition) {
-            return (
-                <ul>
-                    {produceData.nutrition.map(item => 
-                        <li key={item.id}>
-                            <span>{item.category}</span>{item.value}
-                        </li>
-                    )}
-                </ul>
-            )
-        }
-
-        return null
+        return (
+            <ul className="intro__nutrition">
+                {produceData.nutrition.map(item => 
+                    <li key={item.id}>
+                        {item.category}<span>{item.value}</span>
+                    </li>
+                )}
+            </ul>
+        )
     }
 
 }
@@ -80,13 +105,12 @@ class App extends Component {
 
     render() {
         return (
-            <div>
-                <Header />
-                {produceData.image &&<Image image={produceData.image} />}
+            <div className=""> 
+                <Cover />
+                {produceData.name &&<Header />}
                 <Intro />
-                <Nutritional />
                 {produceData.tabs && <Tabs tabsData={produceData.tabs} />}
-                <Mailchimp />
+                <Mailchimp name={produceData.name} />
             </div>
         )
     }
