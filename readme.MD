@@ -4,7 +4,7 @@ Developer: Jacob Walters
 
 ### Overview
 
-Task to build React app that displays lost tomato (or other fruit/veg) data.
+React app that displays tomato (or other fruit/veg) data
 
 ### Dependencies
 
@@ -16,4 +16,3 @@ Task to build React app that displays lost tomato (or other fruit/veg) data.
 * npm install
 * npm run start
 * npm run build (for production)
-
