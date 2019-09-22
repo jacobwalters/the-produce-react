@@ -39,11 +39,39 @@
         }
 
         h4 {
+            position: relative;
             font-family: 'Taviraj', serif;
             font-style: italic;
             font-weight: 300;
             font-size: 1.4rem;
             margin: $spacing 0 0;
+
+            div {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: white;
+                width: 100%;
+            }
+
+            span {
+                display: inline-block;
+                width: 18px;
+                height: 20px;
+                text-align: center;
+                border: solid 1px #333;
+                border-radius: 100%;
+                margin-left: 10px;
+                padding-right: 2px;
+                font-family: serif;
+                font-weight: bold;
+                background-color: #f3efec;
+            }
+
+            &:hover > div {
+                display: block;
+            }
         }
 
         ul {
