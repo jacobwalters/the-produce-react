@@ -43,8 +43,9 @@ const CustomForm = ({ status, message, onValidated }) => {
 
 export default class Mailchimp extends React.Component {
     render() {
+    // Use provided API URL or your own URL for the Mailchimp to work
     const url =
-        "https://gmail.us20.list-manage.com/subscribe/post?u=ee976be3133d7ca5589cbee43&amp;id=8e095e860e";
+        "";
     return (
         <div className="newsletter">
             <h3>Stay up to date about the humble {this.props.name}</h3>
