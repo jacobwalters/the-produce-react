@@ -18,6 +18,7 @@ export default class Nutritional extends React.Component {
                         </li>
                     )}
                 </ul>
+                <h4>Nutritional value per 100 g (3.5 oz)</h4>
             </div>
         )
     }

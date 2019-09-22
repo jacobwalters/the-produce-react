@@ -38,6 +38,14 @@
             margin: 0 0 $spacing;
         }
 
+        h4 {
+            font-family: 'Taviraj', serif;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 1.4rem;
+            margin: $spacing 0 0;
+        }
+
         ul {
             li {
                 display: flex;
