@@ -10,61 +10,58 @@
         {
             "id": 1,
             "category": "Carbohydrates",
-            "value": "3.9g",
-
-            "as": [
-                {
-                    "id": 1,
-                    "category": "Sugars",
-                    "value": "2.6g"
-                },
-                {
-                    "id": 2,
-                    "category": "Dietary fiber",
-                    "value": "1;2g"
-                }
-            ]
+            "value": "3.9g"
         },
         {
+            "as": true,
             "id": 2,
+            "category": "Sugars",
+            "value": "2.6g"
+        },
+        {
+            "as": true,
+            "id": 3,
+            "category": "Dietary fiber",
+            "value": "1;2g"
+        },
+        {
+            "id": 4,
             "category": "Fat",
             "value": "0.2g"
         },
         {
-            "id": 3,
+            "id": 5,
             "category": "Protein",
             "value": "0.9g"
         },
         {
-            "id": 4,
+            "id": 6,
             "category": "Water",
             "value": "94.5g"
         },
         {
-            "id": 5,
+            "id": 7,
             "category": "Vitamin A Equiv",
-            "value": "42µg (5%)",
-
-            "as": [
-                {
-                    "id": 1,
-                    "category": "Lutein and Zeaxanthin",
-                    "value": "123µg"
-                }
-            ]
+            "value": "42µg (5%)"
         },
         {
-            "id": 6,
+            "as": true,
+            "id": 8,
+            "category": "Lutein and Zeaxanthin",
+            "value": "123µg"
+        },
+        {
+            "id": 9,
             "category": "Vitamin C",
             "value": "14mg (17%)"
         },
         {
-            "id": 7,
+            "id": 10,
             "category": "Vitamin E",
             "value": "0.54mg (4%)"
         },
         {
-            "id": 8,
+            "id": 11,
             "category": "Potassium",
             "value": "237mg (5%)"
         }

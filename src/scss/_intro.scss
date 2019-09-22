@@ -7,26 +7,63 @@
         display: flex;
         margin-bottom: $spacing*5;
 
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+
         > * {
             flex: 1 1 auto;
         }
 
         p {
-            width: 65%;
-            padding-right: $spacing*5;
+            @media (max-width: 767px) {
+                padding-bottom: $spacing*5;
+            }
+
+            @media (min-width: 768px) {
+                width: 65%;
+                padding-right: $spacing*5;
+            }
         }
 
-        ul {
-            width: 35%;
+        div {
+            @media (min-width: 768px) {
+                width: 35%;
+            }
         }
     }
 
     &__nutrition {
-        li {
-            display: flex;
+        h3 {
+            margin: 0 0 $spacing;
+        }
 
-            span {
-                margin-left: auto;
+        ul {
+            li {
+                display: flex;
+                padding: 2px 0;
+    
+                span {
+                    margin-left: auto;
+                }
+    
+                &:not(:last-of-type) {
+                    border-bottom: solid 1px #eee;
+                }
+    
+                &.child {
+                    font-style: italic;
+    
+                    span {
+                        font-style: normal;
+                    }
+    
+                    &::before {
+                        content: '-';
+                        display: inline-block;
+                        padding-right: 5px;
+                    }
+                }
             }
         }
     }

@@ -14,19 +14,6 @@ const CustomForm = ({ status, message, onValidated }) => {
 
     return (
     <div className="newsletter__form">
-        {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
-        {status === "error" && (
-        <div
-            style={{ color: "red" }}
-            dangerouslySetInnerHTML={{ __html: message }}
-        />
-        )}
-        {status === "success" && (
-        <div
-            style={{ color: "green" }}
-            dangerouslySetInnerHTML={{ __html: message }}
-        />
-        )}
         <input
             ref={node => (name = node)}
             type="text"
@@ -42,6 +29,14 @@ const CustomForm = ({ status, message, onValidated }) => {
         <button onClick={submit}>
         Submit
         </button>
+
+        {status === "sending" && <div>sending...</div>}
+        {status === "error" && (
+        <div dangerouslySetInnerHTML={{ __html: message }} />
+        )}
+        {status === "success" && (
+        <div dangerouslySetInnerHTML={{ __html: message }} />
+        )}
     </div>
     );
 };
@@ -49,7 +44,7 @@ const CustomForm = ({ status, message, onValidated }) => {
 export default class Mailchimp extends React.Component {
     render() {
     const url =
-        "https://jster.us7.list-manage.com/subscribe/post?u=ee976be3133d7ca5589cbee43&amp;id=8e095e860e";
+        "https://gmail.us20.list-manage.com/subscribe/post?u=ee976be3133d7ca5589cbee43&amp;id=8e095e860e";
     return (
         <div className="newsletter">
             <h3>Stay up to date about the humble {this.props.name}</h3>

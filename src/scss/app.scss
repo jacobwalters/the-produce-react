@@ -23,7 +23,7 @@ ul {
     }
 }
 
-$site-width: 900px;
+$site-width: 950px;
 $spacing: 1rem;
 
 %container {
@@ -32,6 +32,7 @@ $spacing: 1rem;
     margin: 0 auto;
     padding-left: $spacing*2;
     padding-right: $spacing*2;
+    box-sizing: border-box;
 }
 
 
@@ -72,5 +73,17 @@ $spacing: 1rem;
     &__form {
         display: flex;
         justify-content: center;
+        flex-flow: column wrap;
+        max-width: 500px;
+        margin: 0 auto;
+
+        @media (min-width: 768px) {
+            flex-flow: row wrap;
+        }
+
+        > div {
+            width: 100%;
+            padding-top: $spacing;
+        }
     }
 }

@@ -6,6 +6,8 @@ export default class Tab extends React.Component {
         super(props)
         this.state = {
             activeTab: 1,
+            // Must be a better way to do this, but it works
+            // Would have been nice to have better communication between components
             tabContent: this.props.tabsData[0].text
         }
     }
@@ -21,6 +23,7 @@ export default class Tab extends React.Component {
             return (
                 <div className="tabs">
                     {this.props.tabsData.map(tab => 
+                        // buttons for each tab which updates the tab content below
                         <button
                             className={
                                 this.state.activeTab === tab.id ? 'active' : ''

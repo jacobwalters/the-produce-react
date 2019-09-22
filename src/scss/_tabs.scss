@@ -12,8 +12,12 @@
         border-radius: 0;
         cursor: pointer;
         padding: $spacing;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: bold;
+
+        @media (min-width: 768px) {
+            font-size: 1.8rem;
+        }
 
         &:first-of-type {
             border-left: solid 1px #555;
